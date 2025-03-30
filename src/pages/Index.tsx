@@ -353,7 +353,7 @@ const Index = () => {
             <FadeIn delay={200}>
               <div className="relative aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  src="/event1.jpg" 
                   alt="Gallery image" 
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />
@@ -367,25 +367,26 @@ const Index = () => {
             </FadeIn>
             
             <FadeIn delay={300}>
-              <div className="relative aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="Gallery image" 
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-3 text-white text-sm">
-                    <p className="font-bold">Bangalore</p>
-                    <p>December 2023</p>
-                  </div>
-                </div>
-              </div>
+            <div className="relative aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
+  <img 
+    src="/event.jpg" 
+    alt="Gallery image" 
+    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+    <div className="p-3 text-white text-sm">
+      <p className="font-bold">Bangalore</p>
+      <p>December 2023</p>
+    </div>
+  </div>
+</div>
+
             </FadeIn>
             
             <FadeIn delay={400}>
               <div className="relative aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  src="/event2.jpg" 
                   alt="Gallery image" 
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />

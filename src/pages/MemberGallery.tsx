@@ -13,6 +13,7 @@ type GalleryImage = {
   alt: string;
   category: Exclude<GalleryCategory, 'all'>;
   date: string;
+  link?: string;
 };
 
 const MemberGallery = () => {
@@ -22,28 +23,31 @@ const MemberGallery = () => {
   const galleryImages: GalleryImage[] = [
     {
       id: 1,
-      src: 'https://images.unsplash.com/photo-1591115765373-5207764f72e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      src:"/event.jpg",
       alt: 'Annual Finance Summit 2023',
       category: 'conferences',
-      date: 'June 2023'
+      date: 'June 2023',
+      link: 'https://memzo.co/m/Finmeet-June-24854/11919'
+
     },
     {
       id: 2,
-      src: 'https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      src: "/event1.jpg",
       alt: 'Executive Board Meeting',
       category: 'meetings',
-      date: 'July 2023'
+      date: 'July 2023',
+       link: 'https://memzo.co/m/Finmeet-June-24854/11919'
     },
     {
       id: 3,
-      src: 'https://images.unsplash.com/photo-1558403194-611308249627?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      src: "/event2.jpg",
       alt: 'Investment Strategy Workshop',
       category: 'workshops',
       date: 'August 2023'
     },
     {
       id: 4,
-      src: 'https://images.unsplash.com/photo-1596819502516-aa0b7312168d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      src: 'https://images.unsplash.com/photo-1558403194-611308249627?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       alt: 'Networking Cocktail Reception',
       category: 'events',
       date: 'September 2023'
@@ -105,6 +109,8 @@ const MemberGallery = () => {
       date: 'May 2024'
     }
   ];
+
+  
   
   const filteredImages = galleryImages.filter(image => {
     const matchesCategory = activeCategory === 'all' || image.category === activeCategory;
@@ -183,23 +189,29 @@ const MemberGallery = () => {
           
           {filteredImages.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {filteredImages.map((image, index) => (
-                <FadeInUp key={image.id} delay={50 * (index % 8)}>
-                  <div className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300 h-full">
-                    <div className="aspect-w-16 aspect-h-12">
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                      <h3 className="text-white font-bold text-lg">{image.alt}</h3>
-                      <p className="text-white/80 text-sm">{image.date}</p>
-                    </div>
-                  </div>
-                </FadeInUp>
-              ))}
+           {filteredImages.map((image, index) => (
+  <FadeInUp key={image.id} delay={50 * (index % 8)}>
+    <a 
+      href={image.link || '#'} 
+      target={image.link ? '_blank' : '_self'} 
+      rel="noopener noreferrer"
+      className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300 h-full block"
+    >
+      <div className="aspect-w-16 aspect-h-12">
+        <img
+          src={image.src}
+          alt={image.alt}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+        <h3 className="text-white font-bold text-lg">{image.alt}</h3>
+        <p className="text-white/80 text-sm">{image.date}</p>
+      </div>
+    </a>
+  </FadeInUp>
+))}
+
             </div>
           ) : (
             <div className="text-center py-16 bg-gray-50 rounded-lg">

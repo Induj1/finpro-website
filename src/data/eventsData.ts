@@ -24,7 +24,7 @@ export const finmeetEvents: Event[] = [
     date: 'February 8, 2025',
     location: 'Delhi',
     description: 'Professional Networking & Knowledge Exchange',
-    image: 'https://images.unsplash.com/photo-1591115765373-5207764f72e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://images.unsplash.com/photo-1558403194-611308249627?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ export const finmeetEvents: Event[] = [
     date: 'June 14, 2025',
     location: 'Bangalore',
     description: 'National Conference & Workshops',
-    image: 'https://images.unsplash.com/photo-1620662736427-c3fff752c5f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 4,
